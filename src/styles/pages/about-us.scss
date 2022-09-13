@@ -1,0 +1,90 @@
+.about-us {
+  position: relative;
+  display: grid;
+  grid-template-rows: 100vh 60px 1fr repeat(5, 300px);
+  grid-template-columns: 100%;
+
+  > * {
+    border: 1px solid red;
+  }
+
+  .hero-wrapper {
+    background-image: url("/assets/scott-graham-OQMZwNd3ThU-unsplash.jpg");
+    background-size: cover;
+    background-position: top;
+  }
+
+  .div-1 {
+    @include flex-column;
+
+    .div-1-header {
+      width: 100%;
+      height: 200px;
+      @include flex-row;
+      border: 2px dashed yellow;
+    }
+
+    .ideals-div {
+      display: grid;
+      grid-template-areas:
+        "a b c"
+        "d e f";
+      grid-template-columns: repeat(3, min(30vw, 400px));
+      grid-template-rows: repeat(2, 300px);
+
+      > * {
+        @include flex-column;
+      }
+
+      .sophisticated {
+        grid-area: a;
+        border: 2px dashed red;
+        position: relative;
+        // left: -200px;
+        // opacity: 0;
+      }
+
+      .small-business-friendly {
+        grid-area: b;
+        border: 2px dashed red;
+      }
+
+      .full-service {
+        grid-area: c;
+        border: 2px dashed red;
+        position: relative;
+        // right: -200px;
+        // opacity: 0;
+      }
+
+      .responsive {
+        grid-area: d;
+        border: 2px dashed red;
+        position: relative;
+        // left: -200px;
+        // opacity: 0;
+      }
+
+      .strategic {
+        grid-area: e;
+        border: 2px dashed red;
+      }
+
+      .relational {
+        grid-area: f;
+        border: 2px dashed red;
+        position: relative;
+        // right: -200px;
+        // opacity: 0;
+      }
+    }
+  }
+
+  .div-2 {
+    h2 {
+      position: relative;
+      left: -150px;
+      transition: all 0.25s;
+    }
+  }
+}

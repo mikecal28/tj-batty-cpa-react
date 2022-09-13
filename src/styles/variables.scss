@@ -1,0 +1,28 @@
+@mixin flex-row() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column() {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+// color variables
+$dark-white-smoke: rgb(243, 243, 243);
+$white-smoke: rgb(245, 245, 245);
+$light-white-smoke: rgb(247, 247, 247);
+$dark-cerulean-blue: rgb(11, 74, 129);
+$blue-lagoon: rgba(0, 75, 129, 0.75);
+$endeavour-blue: rgb(42, 100, 150);
+$cornflower-blue: rgb(85, 172, 238);
+$dark-gray: rgb(176, 176, 176);
+$gray: rgb(119, 119, 119);
+$mortar-gray: rgb(84, 84, 84);
+$nobel-gray: rgb(153, 153, 153);
+$black-russian: rgba(33, 36, 42, 0.9);
+$night-rider-gray: rgb(51, 51, 51);
+$black: rgba(0, 0, 0, 0.7);
