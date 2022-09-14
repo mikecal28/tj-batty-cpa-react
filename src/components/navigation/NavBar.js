@@ -20,7 +20,9 @@ import { Link } from "react-router-dom";
 
 function NavBar(props) {
   return (
-    <div className="navbar">
+    <div
+      className={props.location.pathname === "/" ? "hidden-navbar" : "navbar"}
+    >
       {/* {props.location.pathname === "/login" && (
         <Link exact to={"/"} style={{ textDecoration: "none" }}>
           <button className="nav-buttons">Home</button>

@@ -23,6 +23,10 @@
   min-height: 40px;
 }
 
+.hidden-navbar {
+  display: none;
+}
+
 // .navbar {
 //   @include flex(rn, space-between);
 //   background-color: white;

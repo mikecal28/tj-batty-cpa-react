@@ -8,10 +8,18 @@
     border: 1px solid red;
   }
 
-  .hero-wrapper {
-    background-image: url("/assets/scott-graham-OQMZwNd3ThU-unsplash.jpg");
-    background-size: cover;
-    background-position: top;
+  // .hero-wrapper {
+  //   background-image: url("/assets/scott-graham-OQMZwNd3ThU-unsplash.jpg");
+  //   background-size: cover;
+  //   background-position: top;
+  // }
+
+  .hero-carousel {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    // overflow: hidden;
   }
 
   .div-1 {
@@ -42,6 +50,16 @@
         position: relative;
         // left: -200px;
         // opacity: 0;
+
+        .heading {
+          font-size: 2rem;
+          text-align: center;
+
+          .subheading {
+            font-size: 0.75rem;
+            padding: 1rem;
+          }
+        }
       }
 
       .small-business-friendly {
@@ -79,12 +97,13 @@
       }
     }
   }
-
   .div-2 {
-    h2 {
-      position: relative;
-      left: -150px;
-      transition: all 0.25s;
+    .card-container {
+      .card {
+        border: none;
+        outline: none;
+        width: fit-content;
+      }
     }
   }
 }
