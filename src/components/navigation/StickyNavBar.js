@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Component } from "react";
 import { Link } from "react-router-dom";
 
@@ -32,8 +33,9 @@ class StickyNavBar extends Component {
             : "about-us-navbar"
         }
       >
+        <FontAwesomeIcon id="navbar-star" icon={["fa-solid", "fa-star"]} />
         <Link to={"/"} style={{ textDecoration: "none", color: "white" }}>
-          <button className="nav-buttons">About Us</button>
+          <button className="nav-buttons">ABOUT US</button>
         </Link>
 
         <Link

@@ -17,11 +17,13 @@
 // export default NavBar;
 
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function NavBar(props) {
   return (
     <div
       className={props.location.pathname === "/" ? "hidden-navbar" : "navbar"}
+      style={{ padding: "0 2rem", margin: "0" }}
     >
       {/* {props.location.pathname === "/login" && (
         <Link exact to={"/"} style={{ textDecoration: "none" }}>
@@ -32,8 +34,9 @@ function NavBar(props) {
       {props.location.pathname.includes("/") &&
         props.location.pathname !== "/" && (
           <div id="move-navbar" className="navbar about-us-navbar">
+            <FontAwesomeIcon id="navbar-star" icon={["fa-solid", "fa-star"]} />
             <Link to={"/"} style={{ textDecoration: "none", color: "white" }}>
-              <button className="nav-buttons">About Us</button>
+              <button className="nav-buttons">ABOUT US</button>
             </Link>
 
             <Link

@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import "./styles/main.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import "./fontawesome";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
