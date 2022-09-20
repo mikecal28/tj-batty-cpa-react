@@ -73,7 +73,7 @@ function AboutUs() {
           type: "ease-in-out",
           duration: 0.5,
         }}
-        viewport={{ amount: 0.8, margin: "75% 0% 0% 0%" }}
+        viewport={{ amount: 0.8, margin: "55% 0% 0% 0%" }}
       >
         <div className="div-1-header">
           WHAT DO YOU NEED YOUR CPA FIRM TO BE?

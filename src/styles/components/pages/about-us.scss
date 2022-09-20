@@ -30,6 +30,9 @@
       height: 200px;
       @include flex-row;
       border: 2px dashed yellow;
+      font-size: 2.5rem;
+      font-family: "Oswald", sans-serif;
+      letter-spacing: 1px;
     }
 
     .ideals-div {
@@ -46,7 +49,7 @@
 
       .sophisticated {
         grid-area: a;
-        border: 2px dashed red;
+
         position: relative;
         // left: -200px;
         // opacity: 0;
@@ -64,7 +67,6 @@
 
       .small-business-friendly {
         grid-area: b;
-        border: 2px dashed red;
 
         .heading {
           font-size: 2rem;
@@ -79,7 +81,7 @@
 
       .full-service {
         grid-area: c;
-        border: 2px dashed red;
+
         position: relative;
         // right: -200px;
         // opacity: 0;
@@ -97,7 +99,7 @@
 
       .responsive {
         grid-area: d;
-        border: 2px dashed red;
+
         position: relative;
         // left: -200px;
         // opacity: 0;
@@ -115,7 +117,6 @@
 
       .strategic {
         grid-area: e;
-        border: 2px dashed red;
 
         .heading {
           font-size: 2rem;
@@ -130,7 +131,7 @@
 
       .relational {
         grid-area: f;
-        border: 2px dashed red;
+
         position: relative;
         // right: -200px;
         // opacity: 0;

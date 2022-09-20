@@ -1,9 +1,13 @@
+import { useEffect } from "react";
+
 function Clients() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <div className="page-container clients">
-      <div className="hero-wrapper">
-        <h1>Clients</h1>
-      </div>
+    <div className="clients">
+      <div className="hero-wrapper"></div>
     </div>
   );
 }

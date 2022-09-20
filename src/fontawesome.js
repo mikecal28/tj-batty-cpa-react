@@ -5,7 +5,9 @@ import {
   faStar,
   faCircle,
   faCalculator,
+  faBook,
+  faCommentsDollar,
 } from "@fortawesome/free-solid-svg-icons";
 
 // Add the icons to your library
-library.add(faStar, faCircle, faCalculator);
+library.add(faStar, faCircle, faCalculator, faBook, faCommentsDollar);
