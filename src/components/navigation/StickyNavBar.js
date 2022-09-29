@@ -75,14 +75,14 @@ class StickyNavBar extends Component {
         </Link>
 
         <Link to={"/blog"} style={{ textDecoration: "none", color: "white" }}>
-          <button className="nav-buttons">Blog</button>
+          <button className="nav-buttons">BLOG</button>
         </Link>
 
         <Link
           to={"/contact-us"}
           style={{ textDecoration: "none", color: "white" }}
         >
-          <button className="nav-buttons">Contact Us</button>
+          <button className="nav-buttons">CONTACT US</button>
         </Link>
       </div>
     );

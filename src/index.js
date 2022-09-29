@@ -5,11 +5,13 @@ import "./styles/main.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "./fontawesome";
+import ScrollToTop from "./components/util/ScrollToTop";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+      <ScrollToTop />
       <App />
     </BrowserRouter>
   </React.StrictMode>

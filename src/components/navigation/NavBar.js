@@ -16,7 +16,7 @@
 
 // export default NavBar;
 
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function NavBar(props) {
@@ -36,65 +36,69 @@ function NavBar(props) {
             }
           >
             <FontAwesomeIcon id="navbar-star" icon={["fa-solid", "fa-star"]} />
-            <Link to={"/"} style={{ textDecoration: "none", color: "white" }}>
+            <NavLink
+              exact
+              to={"/"}
+              style={{ textDecoration: "none", color: "white" }}
+            >
               <button className="nav-buttons">ABOUT US</button>
-            </Link>
+            </NavLink>
 
-            <Link
+            <NavLink
               to={"/clients"}
               style={{ textDecoration: "none", color: "white" }}
             >
               <button className="nav-buttons">CLIENTS</button>
-            </Link>
+            </NavLink>
 
-            <Link
+            <NavLink
               to={"/tax"}
               style={{ textDecoration: "none", color: "white" }}
             >
               <button className="nav-buttons">TAX</button>
-            </Link>
+            </NavLink>
 
-            <Link
+            <NavLink
               to={"/accounting"}
               style={{ textDecoration: "none", color: "white" }}
             >
               <button className="nav-buttons">ACCOUNTING</button>
-            </Link>
+            </NavLink>
 
-            <Link
+            <NavLink
               to={"/advisory"}
               style={{ textDecoration: "none", color: "white" }}
             >
               <button className="nav-buttons">ADVISORY</button>
-            </Link>
+            </NavLink>
 
-            <Link
+            <NavLink
               to={"/international"}
               style={{ textDecoration: "none", color: "white" }}
             >
               <button className="nav-buttons">INTERNATIONAL</button>
-            </Link>
+            </NavLink>
 
-            <Link
+            <NavLink
               to={"/legal"}
               style={{ textDecoration: "none", color: "white" }}
             >
               <button className="nav-buttons">LEGAL</button>
-            </Link>
+            </NavLink>
 
-            <Link
+            <NavLink
               to={"/blog"}
               style={{ textDecoration: "none", color: "white" }}
             >
-              <button className="nav-buttons">Blog</button>
-            </Link>
+              <button className="nav-buttons">BLOG</button>
+            </NavLink>
 
-            <Link
+            <NavLink
               to={"/contact-us"}
               style={{ textDecoration: "none", color: "white" }}
             >
-              <button className="nav-buttons">Contact Us</button>
-            </Link>
+              <button className="nav-buttons">CONTACT US</button>
+            </NavLink>
           </div>
         )}
     </div>

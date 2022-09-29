@@ -2,11 +2,18 @@
   @include box(100%);
   position: relative;
   display: grid;
-  grid-template-rows: 100vh 60px 1fr repeat(5, 300px);
+  grid-template-rows: 25rem 12rem 12rem 300px 30rem 22rem;
   grid-template-columns: 100%;
+  text-align: center;
 
-  > * {
-    border: 1px solid red;
+  // > * {
+  //   border: 1px solid red;
+  // }
+
+  h2 {
+    font-size: 1rem;
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 1px;
   }
 
   // .about-us-navbar {
@@ -20,14 +27,90 @@
   //   }
   // }
 
-  > * {
+  .hero-wrapper {
+    @include flex(cn);
     border: 1px solid red;
+    background-color: rgb(97, 98, 100);
+    @include box(100%, 25rem);
+    clip-path: polygon(100% 0%, 100% 82%, 50% 100%, 0% 82%, 0% 0%);
+
+    .page-header {
+      font-size: 3rem;
+      font-family: "Oswald", sans-serif;
+      letter-spacing: 1px;
+      color: white;
+    }
   }
 
-  .hero-wrapper {
-    background-image: url("/assets/scott-graham-OQMZwNd3ThU-unsplash.jpg");
-    background-size: cover;
-    background-position: top;
-    @include box(100%, calc(100vh - 10rem));
+  .div-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 1px;
+  }
+
+  .div-2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 10rem;
+
+    .div-2-icon {
+      @include flex(cn);
+      gap: 1rem;
+
+      img {
+        filter: invert(16%) sepia(36%) saturate(5777%) hue-rotate(195deg)
+          brightness(92%) contrast(91%);
+      }
+    }
+  }
+
+  .div-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 1px;
+    gap: 3.5rem;
+  }
+
+  .div-4 {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: baseline;
+    padding: 0 20rem 8rem 20rem;
+
+    .div-4-icon {
+      @include flex(cn);
+      gap: 1rem;
+      text-align: center;
+
+      img {
+        filter: invert(16%) sepia(36%) saturate(5777%) hue-rotate(195deg)
+          brightness(92%) contrast(91%);
+      }
+    }
+  }
+
+  .div-5 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(61, 61, 61);
+    color: white;
+    text-align: center;
+
+    .logo {
+      font-size: 3rem;
+    }
+
+    .contact-info {
+      font-size: 1rem;
+    }
   }
 }

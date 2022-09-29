@@ -6,7 +6,7 @@
   width: 100vw;
   height: 60px;
   min-height: 80px;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   background-color: white;
   margin: 0;
@@ -48,24 +48,14 @@
   position: sticky;
   top: 0;
   z-index: 5;
+  border: 1px solid gray;
 
   .main-navbar {
-    @include flex(rn, space-between);
+    @include flex(rn, center);
     background-color: white;
-    @include box(100%, 5rem);
+    @include box(100vw, 5rem);
     height: 60px;
     transition: min-height 2s;
-
-    .widgets-dashboard-navbar {
-      width: 100%;
-      @include flex(rn, space-between);
-
-      .page-title {
-        color: black;
-        font-size: 3rem;
-        white-space: nowrap;
-      }
-    }
 
     .nav-buttons {
       font-family: "Oswald", sans-serif;
@@ -87,10 +77,6 @@
 
     .active {
       background-color: red;
-
-      &:hover {
-        background-color: shade(red, 8%);
-      }
     }
   }
 }
