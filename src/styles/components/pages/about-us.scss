@@ -1,7 +1,7 @@
 .about-us {
   position: relative;
   display: grid;
-  grid-template-rows: 100vh 60px 1fr repeat(5, 300px);
+  grid-template-rows: 100vh 60px 60rem 5rem 30rem 40rem 30rem 300px 300px;
   grid-template-columns: 100%;
 
   > * {
@@ -24,6 +24,8 @@
 
   .div-1 {
     @include flex-column;
+    background-color: white;
+    padding-bottom: 10rem;
 
     .div-1-header {
       width: 100%;
@@ -148,12 +150,250 @@
       }
     }
   }
+  .div-2-topper {
+    background-color: white;
+    clip-path: polygon(100% 0, 100% 100%, 50% 0, 0 100%, 0 0);
+  }
+
   .div-2 {
-    .card-container {
-      .card {
-        border: none;
-        outline: none;
-        width: fit-content;
+    background-color: transparent;
+    color: white;
+    margin-top: -5rem;
+
+    img {
+      width: 5rem;
+      height: 5rem;
+    }
+
+    .div-2-header {
+      width: 100%;
+      height: 200px;
+      @include flex(rn);
+      font-size: 2.5rem;
+      font-family: "Oswald", sans-serif;
+      letter-spacing: 1px;
+    }
+
+    .content-wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      height: 50%;
+      column-gap: 8rem;
+      margin: 0 8rem;
+      align-items: baseline;
+
+      .content-item-container-left {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: baseline;
+        column-gap: 2rem;
+
+        img {
+          order: 1;
+          align-self: center;
+          filter: invert(99%) sepia(0%) saturate(1447%) hue-rotate(345deg)
+            brightness(118%) contrast(100%);
+        }
+
+        .content-item-wrapper-left {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-end;
+
+          .item-header {
+            font-size: 2rem;
+            font-family: "Oswald", sans-serif;
+            letter-spacing: 1px;
+          }
+
+          .item-body {
+            font-size: 1rem;
+            font-family: "Oswald", sans-serif;
+            letter-spacing: 1px;
+            text-align: right;
+          }
+        }
+      }
+
+      .content-item-container-right {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: baseline;
+        column-gap: 2rem;
+
+        img {
+          align-self: center;
+          filter: invert(99%) sepia(0%) saturate(1447%) hue-rotate(345deg)
+            brightness(118%) contrast(100%);
+        }
+
+        .content-item-wrapper-right {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+
+          .item-header {
+            font-size: 2rem;
+            font-family: "Oswald", sans-serif;
+            letter-spacing: 1px;
+          }
+
+          .item-body {
+            font-size: 1rem;
+            font-family: "Oswald", sans-serif;
+            letter-spacing: 1px;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+
+  .div-3 {
+    background-color: white;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    .content-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .div-4 {
+    // background-color: transparentize($color: #000000, $amount: 0.3);
+    // background-image: url("../../../assets/andrew-neel-K63xn7P5UOY-unsplash.png");
+    // background-attachment: fixed;
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // color: white;
+    // @include flex(rn);
+
+    img {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    .content-wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      height: 50%;
+      column-gap: 8rem;
+      margin: 0 8rem;
+      align-items: baseline;
+
+      img {
+        align-self: center;
+      }
+
+      .content-item-container-left {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: baseline;
+        column-gap: 2rem;
+
+        .count-item-wrapper-left {
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: center;
+          align-items: center;
+
+          .item-header {
+            font-size: 4rem;
+            font-family: "Oswald", sans-serif;
+            letter-spacing: 1px;
+          }
+
+          .item-body {
+            font-size: 1rem;
+            font-family: "Oswald", sans-serif;
+            letter-spacing: 1px;
+            text-align: right;
+            white-space: nowrap;
+          }
+        }
+
+        .content-item-wrapper-left {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-end;
+
+          .item-header {
+            font-size: 2rem;
+            font-family: "Oswald", sans-serif;
+            letter-spacing: 1px;
+          }
+
+          .item-body {
+            font-size: 1rem;
+            font-family: "Oswald", sans-serif;
+            letter-spacing: 1px;
+            text-align: right;
+          }
+        }
+      }
+
+      .content-item-container-right {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: baseline;
+        column-gap: 2rem;
+
+        img {
+          align-self: center;
+        }
+
+        .count-item-wrapper-right {
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: center;
+          align-items: center;
+
+          .item-header {
+            font-size: 4rem;
+            font-family: "Oswald", sans-serif;
+            letter-spacing: 1px;
+          }
+
+          .item-body {
+            font-size: 1rem;
+            font-family: "Oswald", sans-serif;
+            letter-spacing: 1px;
+            text-align: left;
+            white-space: nowrap;
+          }
+        }
+
+        .content-item-wrapper-right {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+
+          .item-header {
+            font-size: 2rem;
+            font-family: "Oswald", sans-serif;
+            letter-spacing: 1px;
+          }
+
+          .item-body {
+            font-size: 1rem;
+            font-family: "Oswald", sans-serif;
+            letter-spacing: 1px;
+            text-align: left;
+          }
+        }
       }
     }
   }

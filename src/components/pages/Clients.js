@@ -17,7 +17,7 @@ import Stack from "../../assets/svg/stack.svg";
 function Clients() {
   const iconVariants = {
     offscreen: {
-      y: -100,
+      y: -50,
       opacity: 0,
     },
     onscreen: {

@@ -12,6 +12,9 @@ import messages from "../../assets/svg/messages.svg";
 import thumb from "../../assets/svg/thumb.svg";
 import heart from "../../assets/svg/heart.svg";
 
+import ItemChanger from "../ItemChanger";
+import ParallaxBackground from "../../styles/components/ParallaxBackground";
+
 const HeroWithRef = forwardRef((props, ref) => {
   return <HeroRef innerRef={ref} {...props} />;
 });
@@ -51,125 +54,172 @@ function AboutUs() {
     },
   };
 
+  const backgroundImageVariants = {
+    offscreen: {
+      backgroundPosition: "top",
+    },
+    onscreen: {
+      backgroundPosition: "bottom",
+      transition: {
+        staggerChildren: 0.5,
+        type: "ease-in-out",
+        duration: 1,
+      },
+    },
+  };
+
   useEffect(() => {
     console.log(moveNavBar);
   }, [moveNavBar]);
 
   return (
-    <div className="page-container about-us">
-      <Waypoint
-        onEnter={() => setMoveNavBar(false)}
-        onLeave={() => setMoveNavBar(true)}
-      >
-        <HeroWithRef />
-      </Waypoint>
-      <StickyNavBar moveNavBar={moveNavBar} />
-      <motion.div
-        className="div-1"
-        initial="offscreen"
-        whileInView="onscreen"
-        transition={{
-          staggerChildren: 0.1,
-          type: "ease-in-out",
-          duration: 0.5,
-        }}
-        viewport={{ amount: 0.8, margin: "55% 0% 0% 0%" }}
-      >
-        <div className="div-1-header">
-          WHAT DO YOU NEED YOUR CPA FIRM TO BE?
-        </div>
-
-        <div className="ideals-div">
-          <motion.div
-            id="left-column"
-            className="sophisticated"
-            variants={leftColumnVariants}
-          >
-            <img src={star} alt="star" />
-            <motion.div className="heading" variants={leftColumnVariants}>
-              Sophisticated
-              <motion.div className="subheading" variants={leftColumnVariants}>
-                Qualified professionals with the experience to advise you
-                strategically
-              </motion.div>
-            </motion.div>
-          </motion.div>
-
-          <div className="small-business-friendly">
-            <img src={house} alt="house" />
-            <div className="heading">
-              Small Business Friendly
-              <div className="subheading">
-                Bringing needed expertise to smaller clients with complex
-                concerns
-              </div>
-            </div>
+    <div className="page-container">
+      <div className="about-us">
+        <Waypoint
+          onEnter={() => setMoveNavBar(false)}
+          onLeave={() => setMoveNavBar(true)}
+        >
+          <HeroWithRef />
+        </Waypoint>
+        <StickyNavBar moveNavBar={moveNavBar} />
+        <motion.div
+          className="div-1"
+          initial="offscreen"
+          whileInView="onscreen"
+          transition={{
+            staggerChildren: 0.1,
+            type: "ease-in-out",
+            duration: 0.5,
+          }}
+          viewport={{ amount: 0.8, margin: "55% 0% 0% 0%" }}
+        >
+          <div className="div-1-header">
+            WHAT DO YOU NEED YOUR CPA FIRM TO BE?
           </div>
 
-          <motion.div
-            id="right-column"
-            className="full-service"
-            variants={rightColumnVariants}
-          >
-            <img src={mountain} alt="mountain" />
-            <motion.div className="heading" variants={rightColumnVariants}>
-              Full-Service
-              <motion.div className="subheading" variants={rightColumnVariants}>
-                Combining accounting, tax, & advisory services for a holistic
-                approach
+          <div className="ideals-div">
+            <motion.div
+              id="left-column"
+              className="sophisticated"
+              variants={leftColumnVariants}
+            >
+              <img src={star} alt="star" />
+              <motion.div className="heading" variants={leftColumnVariants}>
+                Sophisticated
+                <motion.div
+                  className="subheading"
+                  variants={leftColumnVariants}
+                >
+                  Qualified professionals with the experience to advise you
+                  strategically
+                </motion.div>
               </motion.div>
             </motion.div>
-          </motion.div>
 
-          <motion.div
-            id="left-column"
-            className="responsive"
-            variants={leftColumnVariants}
-          >
-            <img src={messages} alt="messages" />
-            <motion.div className="heading" variants={leftColumnVariants}>
-              Responsive
-              <motion.div className="subheading" variants={leftColumnVariants}>
-                Combining accounting, tax, & advisory services for a holistic
-                approach
-              </motion.div>
-            </motion.div>
-          </motion.div>
-
-          <div className="strategic">
-            <img src={thumb} alt="thumb" />
-            <div className="heading">
-              Strategic
-              <div className="subheading">
-                Nuanced and proactive planning to help you achieve maximum tax
-                efficiency
+            <div className="small-business-friendly">
+              <img src={house} alt="house" />
+              <div className="heading">
+                Small Business Friendly
+                <div className="subheading">
+                  Bringing needed expertise to smaller clients with complex
+                  concerns
+                </div>
               </div>
             </div>
-          </div>
 
-          <motion.div
-            id="right-column"
-            className="relational"
-            variants={rightColumnVariants}
-          >
-            <img src={heart} alt="heart" />
-            <motion.div className="heading" variants={rightColumnVariants}>
-              Relational
-              <motion.div className="subheading" variants={rightColumnVariants}>
-                Building strong relationships with our clients to better
-                understand their needs
+            <motion.div
+              id="right-column"
+              className="full-service"
+              variants={rightColumnVariants}
+            >
+              <img src={mountain} alt="mountain" />
+              <motion.div className="heading" variants={rightColumnVariants}>
+                Full-Service
+                <motion.div
+                  className="subheading"
+                  variants={rightColumnVariants}
+                >
+                  Combining accounting, tax, & advisory services for a holistic
+                  approach
+                </motion.div>
               </motion.div>
             </motion.div>
-          </motion.div>
-        </div>
-      </motion.div>
 
-      <div className="div-2"></div>
-      <div className="div-3"></div>
-      <div className="div-4"></div>
-      <div className="div-5"></div>
-      <div className="div-6"></div>
-      <div className="footer"></div>
+            <motion.div
+              id="left-column"
+              className="responsive"
+              variants={leftColumnVariants}
+            >
+              <img src={messages} alt="messages" />
+              <motion.div className="heading" variants={leftColumnVariants}>
+                Responsive
+                <motion.div
+                  className="subheading"
+                  variants={leftColumnVariants}
+                >
+                  Combining accounting, tax, & advisory services for a holistic
+                  approach
+                </motion.div>
+              </motion.div>
+            </motion.div>
+
+            <div className="strategic">
+              <img src={thumb} alt="thumb" />
+              <div className="heading">
+                Strategic
+                <div className="subheading">
+                  Nuanced and proactive planning to help you achieve maximum tax
+                  efficiency
+                </div>
+              </div>
+            </div>
+
+            <motion.div
+              id="right-column"
+              className="relational"
+              variants={rightColumnVariants}
+            >
+              <img src={heart} alt="heart" />
+              <motion.div className="heading" variants={rightColumnVariants}>
+                Relational
+                <motion.div
+                  className="subheading"
+                  variants={rightColumnVariants}
+                >
+                  Building strong relationships with our clients to better
+                  understand their needs
+                </motion.div>
+              </motion.div>
+            </motion.div>
+          </div>
+        </motion.div>
+
+        <div className="div-2-topper"></div>
+        <ParallaxBackground whichDiv={"div-2"} />
+
+        <div className="div-3">
+          <h1 className="div-3-header">WHAT DO WE DO?</h1>
+          <div className="content-wrapper">
+            <div className="content-item-container-left">
+              <div
+                style={{
+                  width: "10rem",
+                  height: "10rem",
+                  backgroundColor: "red",
+                }}
+              ></div>
+            </div>
+            <div className="content-item-container-right">
+              <ItemChanger />
+            </div>
+          </div>
+        </div>
+        <ParallaxBackground />
+
+        <div className="div-5"></div>
+        <div className="div-6"></div>
+        <div className="footer"></div>
+      </div>
     </div>
   );
 }

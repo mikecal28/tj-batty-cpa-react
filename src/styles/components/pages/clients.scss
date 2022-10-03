@@ -5,6 +5,8 @@
   grid-template-rows: 25rem 12rem 12rem 300px 30rem 22rem;
   grid-template-columns: 100%;
   text-align: center;
+  background-color: white;
+  animation: fadeIn 1.2s cubic-bezier(1, 0, 0.78, -0.17);
 
   // > * {
   //   border: 1px solid red;

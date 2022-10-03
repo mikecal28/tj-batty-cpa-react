@@ -7,6 +7,7 @@ import Clients from "./components/pages/Clients";
 function App(props) {
   return (
     <div className="app-container">
+      <div className="background-image-container"></div>
       <Route
         path="*"
         {...props}
