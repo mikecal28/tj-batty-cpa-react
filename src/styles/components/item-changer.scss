@@ -1,10 +1,78 @@
 .item-changer {
-  width: "35rem";
-  height: "23.33rem";
-  background-color: "blue";
+  width: 35rem;
+  height: 23.33rem;
 
   .box {
-    width: "35rem";
-    height: "23.33rem";
+    width: 35rem;
+    height: 23.33rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+
+    .snippet-buttons-wrapper {
+      display: flex;
+      gap: 0.25rem;
+
+      .snippet-button {
+        width: 4rem;
+        height: 4rem;
+        background-color: rgb(176, 176, 176);
+        outline: none;
+        border: none;
+        font-size: 2rem;
+        color: white;
+      }
+
+      .active {
+        background-color: rgb(17, 75, 127);
+      }
+    }
+
+    .snippet-wrapper {
+      margin-top: 2rem;
+      height: 23.33rem;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+
+      .snippet-header {
+        font-size: 2.5rem;
+        font-family: "Oswald", sans-serif;
+        letter-spacing: 1px;
+        color: rgb(17, 75, 127);
+      }
+
+      .snippet-title {
+        font-size: 1.5rem;
+        font-family: "Oswald", sans-serif;
+        letter-spacing: 1px;
+      }
+
+      .snippet-paragraph {
+        font-size: 0.9rem;
+        color: rgb(119, 119, 119);
+        line-height: 1.25rem;
+        width: 25rem;
+      }
+
+      .read-more-button {
+        width: 7rem;
+        height: 2rem;
+        outline: none;
+        border: 3px solid rgb(17, 75, 127);
+        border-radius: 20px;
+        font-size: 0.8rem;
+        color: rgb(119, 119, 119);
+        background: linear-gradient(to left, white 50%, rgb(17, 75, 127) 50%)
+          right;
+        background-size: 200% 100%;
+
+        &:hover {
+          background-position: left;
+          color: white;
+          transition: all 0.5s ease;
+        }
+      }
+    }
   }
 }
