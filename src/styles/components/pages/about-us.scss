@@ -1,7 +1,7 @@
 .about-us {
   position: relative;
   display: grid;
-  grid-template-rows: 100vh 60px 60rem 5rem 30rem 40rem 30rem 300px 300px;
+  grid-template-rows: 100vh 60px 60rem 30rem 40rem 30rem 300px 300px;
   grid-template-columns: 100%;
 
   > * {
@@ -47,6 +47,11 @@
 
       > * {
         @include flex-column;
+      }
+
+      img {
+        filter: invert(16%) sepia(36%) saturate(5777%) hue-rotate(195deg)
+          brightness(92%) contrast(91%);
       }
 
       .sophisticated {
@@ -150,103 +155,117 @@
       }
     }
   }
-  .div-2-topper {
-    background-color: white;
-    clip-path: polygon(100% 0, 100% 100%, 50% 0, 0 100%, 0 0);
-  }
 
   .div-2 {
-    background-color: transparent;
+    background-color: transparentize($color: #000000, $amount: 0.9);
+
     color: white;
-    margin-top: -5rem;
+    height: 30rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
 
     img {
       width: 5rem;
       height: 5rem;
     }
 
-    .div-2-header {
-      width: 100%;
-      height: 200px;
-      @include flex(rn);
-      font-size: 2.5rem;
-      font-family: "Oswald", sans-serif;
-      letter-spacing: 1px;
+    .clipped-top {
+      background-color: white;
+      height: 5rem;
+      width: 100vw;
+      position: absolute;
+      top: 0px;
+      clip-path: polygon(100% 0, 100% 100%, 50% 0, 0 100%, 0 0);
     }
+    .div-2-content-container {
+      max-width: min(100%, 1400px);
 
-    .content-wrapper {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      height: 50%;
-      column-gap: 8rem;
-      margin: 0 8rem;
-      align-items: baseline;
-
-      .content-item-container-left {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-        align-items: baseline;
-        column-gap: 2rem;
-
-        img {
-          order: 1;
-          align-self: center;
-          filter: invert(99%) sepia(0%) saturate(1447%) hue-rotate(345deg)
-            brightness(118%) contrast(100%);
-        }
-
-        .content-item-wrapper-left {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: flex-end;
-
-          .item-header {
-            font-size: 2rem;
-            font-family: "Oswald", sans-serif;
-            letter-spacing: 1px;
-          }
-
-          .item-body {
-            font-size: 1rem;
-            font-family: "Oswald", sans-serif;
-            letter-spacing: 1px;
-            text-align: right;
-          }
-        }
+      .div-2-header {
+        width: 100%;
+        height: 200px;
+        @include flex(rn);
+        font-size: 2.5rem;
+        font-family: "Oswald", sans-serif;
+        letter-spacing: 1px;
       }
 
-      .content-item-container-right {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
+      .content-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        height: 50%;
+        column-gap: 8rem;
+        margin: 0 8rem;
         align-items: baseline;
-        column-gap: 2rem;
 
-        img {
-          align-self: center;
-          filter: invert(99%) sepia(0%) saturate(1447%) hue-rotate(345deg)
-            brightness(118%) contrast(100%);
-        }
-
-        .content-item-wrapper-right {
+        .content-item-container-left {
           display: flex;
-          flex-direction: column;
+          flex-flow: row nowrap;
           justify-content: center;
-          align-items: flex-start;
+          align-items: baseline;
+          column-gap: 2rem;
 
-          .item-header {
-            font-size: 2rem;
-            font-family: "Oswald", sans-serif;
-            letter-spacing: 1px;
+          img {
+            order: 1;
+            align-self: center;
+            filter: invert(99%) sepia(0%) saturate(1447%) hue-rotate(345deg)
+              brightness(118%) contrast(100%);
           }
 
-          .item-body {
-            font-size: 1rem;
-            font-family: "Oswald", sans-serif;
-            letter-spacing: 1px;
-            text-align: left;
+          .content-item-wrapper-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+
+            .item-header {
+              font-size: 2rem;
+              font-family: "Oswald", sans-serif;
+              letter-spacing: 1px;
+            }
+
+            .item-body {
+              font-size: 1rem;
+              font-family: "Oswald", sans-serif;
+              letter-spacing: 1px;
+              text-align: right;
+            }
+          }
+        }
+
+        .content-item-container-right {
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: center;
+          align-items: baseline;
+          column-gap: 2rem;
+
+          img {
+            align-self: center;
+            filter: invert(99%) sepia(0%) saturate(1447%) hue-rotate(345deg)
+              brightness(118%) contrast(100%);
+          }
+
+          .content-item-wrapper-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+
+            .item-header {
+              font-size: 2rem;
+              font-family: "Oswald", sans-serif;
+              letter-spacing: 1px;
+            }
+
+            .item-body {
+              font-size: 1rem;
+              font-family: "Oswald", sans-serif;
+              letter-spacing: 1px;
+              text-align: left;
+            }
           }
         }
       }
@@ -264,18 +283,39 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
+      .content-item-container-left {
+        width: 35rem;
+        height: 23.33rem;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .content-item-container-right {
+        width: 35rem;
+        height: 23.33rem;
+      }
     }
   }
 
   .div-4 {
-    // background-color: transparentize($color: #000000, $amount: 0.3);
+    background-color: transparentize($color: #000000, $amount: 0.7);
+
     // background-image: url("../../../assets/andrew-neel-K63xn7P5UOY-unsplash.png");
     // background-attachment: fixed;
     // background-position: center;
     // background-repeat: no-repeat;
     // background-size: cover;
-    // color: white;
+    color: white;
     // @include flex(rn);
+    height: 30rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
 
     img {
       width: 3rem;

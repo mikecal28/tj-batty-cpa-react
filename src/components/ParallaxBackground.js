@@ -1,66 +1,69 @@
 import { Parallax } from "react-parallax";
 
-import ComputerBackground from "../../assets/andrew-neel-K63xn7P5UOY-unsplash.png";
-import arrow from "../../assets/svg/arrow.svg";
+import Div2Background from "../assets/kelly-sikkema-tQQ4BwN_UFs-unsplash.jpg";
+import Div4Background from "../assets/scott-graham-5fNmWej4tAA-unsplash.jpg";
+import arrow from "../assets/svg/arrow.svg";
 
-import dollar from "../../assets/svg/dollar.svg";
-import graph from "../../assets/svg/graph.svg";
-import computer from "../../assets/svg/computer.svg";
-import gavel from "../../assets/svg/gavel.svg";
+import dollar from "../assets/svg/dollar.svg";
+import graph from "../assets/svg/graph.svg";
+import computer from "../assets/svg/computer.svg";
+import gavel from "../assets/svg/gavel.svg";
 
 const ParallaxBackground = (props) => {
   if (props.whichDiv === "div-2") {
     return (
       <Parallax
         blur={0}
-        bgImage={ComputerBackground}
-        bgImageAlt="computer background"
+        bgImage={Div2Background}
+        bgImageAlt="accounting paperwork"
         strength={300}
       >
         <div className="div-2">
-          <h1 className="div-2-header">WHAT DO WE DO?</h1>
-
-          <div className="content-wrapper">
-            <div className="content-item-container-left">
-              <img src={dollar} alt="dollar icon" />
-              <div className="content-item-wrapper-left">
-                <div className="item-header">TAX</div>
-                <div className="item-body">
-                  A full range of tax preparation and consulting services for
-                  individuals and businesses
+          <div className="clipped-top"></div>
+          <div className="div-2-content-container">
+            <h1 className="div-2-header">WHAT DO WE DO?</h1>
+            <div className="content-wrapper">
+              <div className="content-item-container-left">
+                <img src={dollar} alt="dollar icon" />
+                <div className="content-item-wrapper-left">
+                  <div className="item-header">TAX</div>
+                  <div className="item-body">
+                    A full range of tax preparation and consulting services for
+                    individuals and businesses
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className="content-item-container-right">
-              <img src={graph} alt="graph icon" />
-              <div className="content-item-wrapper-right">
-                <div className="item-header">ADVISORY</div>
-                <div className="item-body">
-                  Strategic advisory and planning services to grow your business
-                  and optimize your tax outcome
+              <div className="content-item-container-right">
+                <img src={graph} alt="graph icon" />
+                <div className="content-item-wrapper-right">
+                  <div className="item-header">ADVISORY</div>
+                  <div className="item-body">
+                    Strategic advisory and planning services to grow your
+                    business and optimize your tax outcome
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className="content-item-container-left">
-              <img src={computer} alt="computer icon" />
-              <div className="content-item-wrapper-left">
-                <div className="item-header">ACCOUNTING</div>
-                <div className="item-body">
-                  From full-service bookkeeping to financial statement
-                  preparation
+              <div className="content-item-container-left">
+                <img src={computer} alt="computer icon" />
+                <div className="content-item-wrapper-left">
+                  <div className="item-header">ACCOUNTING</div>
+                  <div className="item-body">
+                    From full-service bookkeeping to financial statement
+                    preparation
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className="content-item-container-right">
-              <img src={gavel} alt="gavel icon" />
-              <div className="content-item-wrapper-right">
-                <div className="item-header">LEGAL</div>
-                <div className="item-body">
-                  Legal and accounting under one roof through Dennis M.
-                  Lanphier, P.C.
+              <div className="content-item-container-right">
+                <img src={gavel} alt="gavel icon" />
+                <div className="content-item-wrapper-right">
+                  <div className="item-header">LEGAL</div>
+                  <div className="item-body">
+                    Legal and accounting under one roof through Dennis M.
+                    Lanphier, P.C.
+                  </div>
                 </div>
               </div>
             </div>
@@ -72,8 +75,8 @@ const ParallaxBackground = (props) => {
     return (
       <Parallax
         blur={0}
-        bgImage={ComputerBackground}
-        bgImageAlt="computer background"
+        bgImage={Div4Background}
+        bgImageAlt="accountant at a computer"
         strength={300}
       >
         <div className="div-4">

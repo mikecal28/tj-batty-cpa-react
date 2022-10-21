@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import StickyNavBar from "../navigation/StickyNavBar";
 import HeroRef from "../HeroRef";
 
+import HowCanWeHelpYouPic from "../../assets/firmbee-com-jrh5lAq-mIs-unsplash.jpg";
+
 import star from "../../assets/svg/star.svg";
 import house from "../../assets/svg/house.svg";
 import mountain from "../../assets/svg/mountain.svg";
@@ -13,7 +15,7 @@ import thumb from "../../assets/svg/thumb.svg";
 import heart from "../../assets/svg/heart.svg";
 
 import ItemChanger from "../ItemChanger";
-import ParallaxBackground from "../../styles/components/ParallaxBackground";
+import ParallaxBackground from "../ParallaxBackground";
 
 const HeroWithRef = forwardRef((props, ref) => {
   return <HeroRef innerRef={ref} {...props} />;
@@ -194,27 +196,21 @@ function AboutUs() {
           </div>
         </motion.div>
 
-        <div className="div-2-topper"></div>
         <ParallaxBackground whichDiv={"div-2"} />
 
         <div className="div-3">
-          <h1 className="div-3-header">WHAT DO WE DO?</h1>
+          <h1 className="div-3-header">HOW CAN WE HELP YOU?</h1>
           <div className="content-wrapper">
             <div className="content-item-container-left">
-              <div
-                style={{
-                  width: "10rem",
-                  height: "10rem",
-                  backgroundColor: "red",
-                }}
-              ></div>
+              <img src={HowCanWeHelpYouPic} />
             </div>
             <div className="content-item-container-right">
               <ItemChanger />
             </div>
           </div>
         </div>
-        <ParallaxBackground />
+
+        <ParallaxBackground whichDiv={"div-4"} />
 
         <div className="div-5"></div>
         <div className="div-6"></div>
